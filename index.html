@@ -1,57 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Los Forasteros MG</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los Forasteros</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<!-- HEADER MOBILE -->
-<header class="mobile-header">
+
+<!-- HEADER -->
+<header class="header">
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    <img src="logo.png" class="mobile-logo">
+    <img src="logo.png" class="logo">
 </header>
 
-<!-- MENU MOBILE -->
-<nav class="mobile-menu" id="mobileMenu">
+<!-- MENU -->
+<nav class="menu" id="menu">
     <a href="#">Nossa História</a>
     <a href="#">Integrantes</a>
     <a href="#">Parceiros</a>
     <a href="#">Nossa Música</a>
     <a href="#">Fale Conosco</a>
 </nav>
-<div class="grid">
-    <div class="cell cell-1">
-        <img src="losforasteros.png">
-    </div>
 
-    <div class="cell cell-2">
-        <video src="losforasteros1.mp4" autoplay loop muted playsinline></video>
-    </div>
+<!-- IMAGEM TOPO -->
+<section class="topo">
+    <img src="banner.jpg">
+</section>
 
-    <div class="cell cell-3">
-        <h3>Opções</h3>
-
-        <ul>
-            <li><a href="#" onclick="mostrarConteudo('historia')">Nossa História</a></li>
-            <li><a href="#" onclick="mostrarConteudo('integrantes')">Integrantes</a></li>
-            <li><a href="#" onclick="mostrarConteudo('parceiros')">Parceiros</a></li>
-            <li><a href="#" onclick="mostrarConteudo('musica')">Nossa Música</a></li>
-        </ul>
-
-        <h3>Deseja entrar em contato?</h3>
-        <ul>
-            <li><a href="#" onclick="mostrarConteudo('contato')">Fale Conosco!</a></li>
-        </ul>
-    </div>
-   
-    <div class="cell cell-4">
-        <div id="conteudo" class="conteudo">
-            <h2>Bem-vindo</h2>
-        </div>
-    </div>
-</div>
+<!-- CONTEÚDO -->
+<section class="content">
+    <h1>Bem-vindo</h1>
+    <p>
+        Há momentos na vida de um motociclista em que a estrada exige escolhas...
+    </p>
+</section>
 
 <script src="script.js"></script>
+
 </body>
 </html>

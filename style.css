@@ -9,139 +9,32 @@
 body {
     font-family: Arial, sans-serif;
     background: #0f0f0f;
-    color: #fff;
+    color: white;
 }
 
-/* GRID DESKTOP */
-.grid {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: auto 1fr;
-    height: 100vh;
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #0f0f0f;
+    border-bottom: 1px solid #222;
 }
 
-/* LATERAL */
-.sidebar {
-    background: #111;
-    padding: 20px;
-    border-right: 1px solid #222;
+/* LOGO */
+.logo {
+    width: 80px;
 }
 
-.sidebar img {
-    width: 100%;
-    margin-bottom: 20px;
+/* BOTÃO MENU */
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
 }
 
-.sidebar h3 {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #ccc;
-}
-
-.sidebar a {
-    display: block;
-    color: #aaa;
-    text-decoration: none;
-    margin-bottom: 10px;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: #fff;
-}
-
-/* TOPO / IMAGEM */
-.topo {
-    grid-column: 2;
-    height: 250px;
-    overflow: hidden;
-}
-
-.topo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* CONTEÚDO */
-.content {
-    padding: 30px;
-    overflow-y: auto;
-}
-
-.content h1 {
-    margin-bottom: 20px;
-}
-
-.content p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-    color: #ccc;
-}
-
-/* ============================= */
-/* 📱 RESPONSIVO (CELULAR) */
-/* ============================= */
-@media (max-width: 768px) {
-
-    .grid {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-
-    /* TOPO COM IMAGEM */
-    .topo {
-        height: 180px;
-        order: 1;
-    }
-
-    /* SIDEBAR VIRA MENU HORIZONTAL */
-    .sidebar {
-        order: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        border-right: none;
-        border-bottom: 1px solid #222;
-    }
-
-    /* LOGO NO TOPO DIREITO */
-    .sidebar img {
-        width: 120px;
-        align-self: flex-end;
-        margin-bottom: 10px;
-    }
-
-    /* MENU */
-    .sidebar a {
-        font-size: 14px;
-        margin-bottom: 8px;
-    }
-
-    /* CONTEÚDO */
-    .content {
-        order: 3;
-        padding: 20px;
-    }
-
-    .content h1 {
-        font-size: 20px;
-    }
-
-    .content p {
-        font-size: 14px;
-    }
-}
-
-
-/* HEADER MOBILE */
-.mobile-header {
-    display: none;
-}
-
-/* MENU MOBILE */
-.mobile-menu {
+/* MENU */
+.menu {
     position: fixed;
     top: 0;
     left: -100%;
@@ -149,11 +42,10 @@ body {
     height: 100%;
     background: #111;
     padding: 30px 20px;
-    transition: 0.4s;
-    z-index: 1000;
+    transition: 0.3s;
 }
 
-.mobile-menu a {
+.menu a {
     display: block;
     color: #fff;
     text-decoration: none;
@@ -161,63 +53,44 @@ body {
     font-size: 16px;
 }
 
-/* ATIVO */
-.mobile-menu.active {
+/* MENU ATIVO */
+.menu.active {
     left: 0;
 }
 
-/* BOTÃO */
-.menu-btn {
-    font-size: 28px;
-    cursor: pointer;
+/* TOPO */
+.topo img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
-/* LOGO */
-.mobile-logo {
-    width: 90px;
+/* CONTEÚDO */
+.content {
+    padding: 20px;
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
+.content h1 {
+    margin-bottom: 15px;
+}
 
-    /* ESCONDE SIDEBAR */
-    .sidebar {
-        display: none;
+.content p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* ANIMAÇÃO SUAVE */
+.content {
+    animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
-
-    /* MOSTRA HEADER */
-    .mobile-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-        background: #0f0f0f;
-        border-bottom: 1px solid #222;
-    }
-
-    /* AJUSTE TOPO */
-    .topo {
-        height: 160px;
-    }
-
-    /* CONTEÚDO */
-    .content {
-        padding: 20px;
-    }
-
-    /* ANIMAÇÃO SUAVE */
-    .content, .topo {
-        animation: fadeIn 0.5s ease;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

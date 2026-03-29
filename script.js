@@ -144,4 +144,8 @@ function mostrarConteudo(tipo) {
     }
 }
 
-
+<script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>

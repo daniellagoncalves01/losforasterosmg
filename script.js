@@ -19,6 +19,7 @@ function mostrarConteudo(tipo) {
 <p>Hoje, seguimos em frente com o vento no rosto e a consciência tranquila. Olhamos para o retrovisor com respeito pelo que passou, mas com os olhos fixos no horizonte que construímos, pois sabemos que nossa história renasce, mas não se apaga.</p>
 
 <p>"Não é quantidade que se forma uma família, e sim a qualidade"</p>
+
         `;
     }
  
@@ -82,34 +83,39 @@ function mostrarConteudo(tipo) {
                     <p>Membro - Família</p>
                 </div>
 
+                    <div class="integrante">
+                    <img src="pessoa10.jpeg">
+                    <h4>Tatiane</h4>
+                    <p>Pilota Próspera</p>
+                    </div>
+
             </div>
         `;
     }
 
-    if (tipo === "parceiros") {
+   if (tipo === "parceiro") {
         conteudo.innerHTML = `
             <h2>Parceiros</h2>
-    
             <div class="integrantes-grid">
-    
+
                 <div class="integrante">
                     <img src="parceiro1.png">
+                    <h4>Renegados Na BR</h4>
+                    <p>Moto Grupo</p>
+                </div>
+
+                <div class="integrante">
+                    <img src="parceiro2.png">
                     <h4>Clandestinos VAPPU</h4>
                     <p>Moto Grupo</p>
                 </div>
-    
-                <div class="integrante">
-                    <img src="parceiro2.png">
-                    <h4>Renegados na BR</h4>
-                    <p>Moto Grupo</p>
-                </div>
-    
+
                 <div class="integrante">
                     <img src="parceiro3.png">
                     <h4>Tadeu Bichon Frisé</h4>
-                    <p> O Bichon Frisé Motociclista</p>
+                    <p>O Bichon Frisé Motociclista</p>
                 </div>
-    
+
             </div>
         `;
     }
@@ -132,20 +138,13 @@ function mostrarConteudo(tipo) {
     if (tipo === "contato") {
         conteudo.innerHTML = `
             <h2>Fale Conosco</h2>
-    
-            <p>Envie sua mensagem para nós através do formulário abaixo:</p>
-            <p>(aguarde o formulário)</p>
-    
-            <div class="form-container">
-                <iframe src="https://forms.gle/yg9Qn5gwucUdKL419" frameborder="0"></iframe>
-            </div>
-        `;
-    
+            <p>Aguarde o formulário</p>
+         <iframe 
+            src="https://forms.gle/YqLYTYQxmiD8WfNH8" 
+            width="100%" 
+            height="600" 
+            style="border:none;">
+        </iframe>
+    `;
+}
     }
-}
-
-<script>
-function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("active");
-}
-</script>

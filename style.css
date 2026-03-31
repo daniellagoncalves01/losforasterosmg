@@ -5,18 +5,9 @@
 }
 
 body {
-    font-family: 'Poppins', Poppins;
+    font-family: 'Inter', sans-serif;
     background: radial-gradient(circle at top, #1a1a1a, #000);
     color: white;
-    padding-bottom: 140px;
-}
-
-h1, h2 {
-    font-family: 'Playfair Display', serif;
-}
-
-body, button, p {
-    font-family: 'Inter', sans-serif;
 }
 
 /* CONTAINER */
@@ -27,14 +18,27 @@ body, button, p {
     text-align: center;
 }
 
-/* HEADER */
+/* HEADER MAIS FORTE */
+.header {
+    padding: 40px 10px 30px;
+}
+
 .logo {
-    width: 135px;
-    height:135px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    object-fit:cover;
-    
-    box-shadow:0 0 25px rgba (225,225,225,0.15);
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    opacity: 0.7;
 }
 
 /* BOTÕES */
@@ -56,22 +60,18 @@ body, button, p {
     transform: scale(1.03);
 }
 
-.links button:active {
-    transform: scale(0.97);
-}
-
-/* CONTEÚDO */
+/* CONTEÚDO (modal) */
 .conteudo {
     position: fixed;
     bottom: -100%;
     left: 0;
     width: 100%;
-    height: 75%;
+    height: 80%;
     background: #111;
     border-radius: 20px 20px 0 0;
-    padding: 25px;
+    padding: 20px;
     overflow-y: auto;
-    transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: 0.4s;
     z-index: 10;
 }
 
@@ -79,7 +79,6 @@ body, button, p {
     bottom: 0;
 }
 
-/* FECHAR */
 .fechar {
     position: absolute;
     top: 10px;
@@ -88,31 +87,52 @@ body, button, p {
     cursor: pointer;
 }
 
-/* GRID */
+/* GRID MELHORADO */
 .integrantes-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
     margin-top: 15px;
 }
 
+/* CARD */
 .integrante {
     background: #1c1c1c;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
+/* FOTO QUADRADA E CENTRALIZADA */
 .integrante img {
     width: 100%;
-    height: 100px;
+    aspect-ratio: 1/1; /* deixa quadrado */
     object-fit: cover;
+    object-position: center; /* foca no rosto */
 }
 
-/* VÍDEO COMO RODAPÉ NORMAL */
+/* TEXTO */
+.integrante h4 {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.integrante p {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* PARCEIROS (usa mesmo estilo) */
+.integrante img {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* VÍDEO COMO RODAPÉ NATURAL */
 .video-footer {
-    margin-top: 40px;
     width: 100%;
-    height: 200px;
+    height: 220px;
+    margin-top: 50px;
 }
 
 .video-footer video {
@@ -121,16 +141,9 @@ body, button, p {
     object-fit: cover;
 }
 
-/* MÚSICA */
-.music-btn {
-    position: fixed;
-    bottom: 150px;
-    left: 15px;
-    background: #111;
-    color: white;
-    border: none;
-    padding: 14px;
-    border-radius: 50%;
-    font-size: 18px;
-    z-index: 20;
+/* MELHOR ESPAÇO PARA SCROLL */
+body::after {
+    content: "";
+    display: block;
+    height: 50px;
 }

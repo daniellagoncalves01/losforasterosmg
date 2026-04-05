@@ -139,10 +139,16 @@ function mostrarConteudo(tipo) {
 
     if (tipo === "instagram") {
         html += `
-        <h2>Redes Sociais</h2>
-        <p> Confira Nossas redes sociais!</p>
-        <p> Instagram • @losforasteros_mg </p>
-        <p> Youtube • Los Forasteros Moto Grupo</p>
+        <div class="integrante">
+        <img src="instagram.jpg">
+        <h4>@losforasteros_mg</h4>
+        <p>Acesse o QR Code e confira!</p>
+        </div>
+
+        <div class="integrante">
+        <img src="youtube.jpg">
+        <h4>Los Forasteros Moto Grupo</h4>
+        <p>Acesse o QR Code e confira!</p>
         </div>`;
     }
     conteudo.innerHTML = html;

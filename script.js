@@ -96,21 +96,21 @@ function mostrarConteudo(tipo) {
     if (tipo === "parceiro") {
         html += `<h2>Parceiros</h2>
         <div class="integrante">
+        <img src="parceiro3.png">
+        <h4>Tadeu Bichon Frisé</h4>
+        <p>O Bichon Frisé Motociclista</p>
+        </div>
+        
+        <div class="integrante">
         <img src="parceiro1.png">
-        <h4>Renegados Na BR</h4>
-        <p>Moto Grupo</p>
-    </div>
-
-    <div class="integrante">
-        <img src="parceiro2.png">
         <h4>Clandestinos VAPPU</h4>
         <p>Moto Grupo</p>
     </div>
 
     <div class="integrante">
-        <img src="parceiro3.png">
-        <h4>Tadeu Bichon Frisé</h4>
-        <p>O Bichon Frisé Motociclista</p>
+        <img src="parceiro2.png">
+        <h4>Renegados na BR</h4>
+        <p>Moto Grupo</p>
     </div>`;
     }
     if (tipo === "musica") {

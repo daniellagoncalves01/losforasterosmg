@@ -128,9 +128,16 @@ function mostrarConteudo(tipo) {
         <iframe src="https://forms.gle/YqLYTYQxmiD8WfNH8" width="100%" height="400"></iframe>`;
     }
 
+    if (tipo === "nossosroles") {
+        html += `<h2>Nossos Rolês</h2>
+        <div class="integrante">
+        <img src="nossosroles.jpg">
+        <h4>Biblioteca de Fotos</h4>
+        <p>Acesse o QR Code e confira!</p>
+        </div>`;
+    }
     conteudo.innerHTML = html;
 }
-
 function fecharConteudo() {
     document.getElementById("conteudo").classList.remove("ativo");
     document.body.style.overflow = "auto";

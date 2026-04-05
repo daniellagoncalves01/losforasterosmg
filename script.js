@@ -128,27 +128,34 @@ function mostrarConteudo(tipo) {
         <iframe src="https://forms.gle/YqLYTYQxmiD8WfNH8" width="100%" height="400"></iframe>`;
     }
 
-    if (tipo === "nossosroles") {
+   if (tipo === "nossosroles") {
         html += `<h2>Nossos Rolês</h2>
         <div class="integrante">
-        <img src="nossosroles.jpg">
-        <h4>Biblioteca de Fotos</h4>
-        <p>Acesse o QR Code e confira!</p>
+            <a href="https://photos.app.goo.gl/yCLP6YDXYSm8bRMa8" target="_blank">
+            <img src="nossosroles.jpg">
+        </a> 
+            <h4>Biblioteca de Fotos</h4>
+        <p>Clique ou escaneie o QR Code e confira!</p>
         </div>`;
     }
 
     if (tipo === "instagram") {
-        html += `
+        html += `<h2>Redes Sociais</h2>
+    
         <div class="integrante">
-        <img src="instagram.jpg">
-        <h4>@losforasteros_mg</h4>
-        <p>Acesse o QR Code e confira!</p>
+            <a href="https://www.instagram.com/losforasteros_mg?igsh=aWN2dTI2eHEzMXZk" target="_blank">
+                <img src="instagram.jpg">
+            </a>
+            <h4>@losforasteros_mg</h4>
+            <p>Clique ou escaneie o QR Code e confira!</p>
         </div>
-
+    
         <div class="integrante">
-        <img src="youtube.jpg">
-        <h4>Los Forasteros Moto Grupo</h4>
-        <p>Acesse o QR Code e confira!</p>
+            <a href="https://www.youtube.com/@losforasteros_mg?si=J5msjOex4DVRbO1B" target="_blank">
+                <img src="youtube.jpg">
+            </a>
+            <h4>Los Forasteros Moto Grupo</h4>
+            <p>Clique ou escaneie o QR Code e confira!</p>
         </div>`;
     }
     conteudo.innerHTML = html;
